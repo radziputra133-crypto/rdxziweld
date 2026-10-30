@@ -1,133 +1,254 @@
+          
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap');
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
-  background: #111820;
-  color: white;
-  font-family: Arial, sans-serif;
+  background: #f4f3ef;
+  color: #202326;
+  font-family: 'DM Sans', sans-serif;
 }
 
 header {
-  padding: 25px 8%;
+  background: #17191b;
+  color: white;
+  padding: 20px 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #0b1015;
 }
 
-header h2 {
-  font-size: 25px;
-}
-
-header span, section span {
-  color: #ff642d;
-}
-
-nav a {
+.logo {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  font: 700 25px 'Oswald';
 }
 
-nav a:hover {
-  color: #ff642d;
+.logo span, .hero span {
+  color: #f26a21;
+}
+
+header button {
+  background: #f26a21;
+  color: white;
+  border: 0;
+  padding: 12px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .hero {
-  min-height: 550px;
-  padding: 130px 8%;
-  background: linear-gradient(120deg, #111820, #263744);
+  background: linear-gradient(120deg, #17191b, #303438);
+  color: white;
+  padding: 90px 8%;
+  min-height: 400px;
 }
 
-.hero p {
-  color: #bbb;
-  margin-bottom: 20px;
-  line-height: 1.7;
+.hero p:first-child {
+  color: #f26a21;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .hero h1 {
-  font-size: clamp(45px, 7vw, 75px);
-  margin-bottom: 25px;
+  font: 700 clamp(40px, 7vw, 70px)/1.1 'Oswald';
+  margin: 20px 0;
 }
 
-.btn {
+.hero p {
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.cta {
   display: inline-block;
-  background: #ff642d;
+  background: #f26a21;
   color: white;
-  padding: 16px 25px;
+  padding: 14px 24px;
+  margin-top: 25px;
   text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
   border-radius: 4px;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background: #e94c18;
+main {
+  padding: 65px 8%;
 }
 
-section:not(.hero) {
-  padding: 80px 8%;
-  text-align: center;
+h2 {
+  font: 600 32px 'Oswald';
 }
 
-section h2 {
-  margin-bottom: 35px;
+.subtitle {
+  color: #777;
+  margin: 10px 0 30px;
 }
 
-.services {
+.products {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.card {
-  padding: 35px 20px;
-  background: #202c37;
-  border-bottom: 3px solid #ff642d;
+.product {
+  background: white;
+  padding: 22px;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 
-.card h3 {
-  color: #ff642d;
+.product .symbol {
+  height: 100px;
+  display: grid;
+  place-items: center;
+  background: #e9e7e1;
+  font-size: 45px;
   margin-bottom: 15px;
 }
 
-.card p, #about p, #contact p {
-  color: #bbb;
-  line-height: 1.8;
+.product h3 {
+  font: 25px 'Oswald';
+  margin-bottom: 8px;
+}
+
+.product p {
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 42px;
+}
+
+.price {
+  color: #e85e18;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.product label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.product input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  border-radius: 3px;
+}
+
+.product button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: 0;
+  color: white;
+  background: #202326;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.product button:hover {
+  background: #f26a21;
+}
+
+.cart-section {
+  background: #e9e7e1;
+  padding: 55px 8%;
+}
+
+#cartItems {
+  margin: 20px 0;
+}
+
+.cart-row {
+  background: white;
+  padding: 14px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-row button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#total {
+  color: #e85e18;
+}
+
+#checkout {
+  max-width: 500px;
+  margin-top: 30px;
+}
+
+#checkout input, #checkout textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 7px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font: inherit;
+}
+
+.checkout {
+  width: 100%;
+  background: #128c49;
+  color: white;
+  border: 0;
+  padding: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.notice {
+  font-size: 12px;
+  color: #777;
+  margin-top: 20px;
+  max-width: 600px;
+  line-height: 1.6;
 }
 
 footer {
+  background: #17191b;
+  color: white;
   text-align: center;
-  padding: 25px;
-  background: #080d12;
-  color: #888;
+  padding: 40px 15px;
+  line-height: 2;
+}
+
+footer small {
+  color: #999;
 }
 
 @media(max-width: 750px) {
-  header {
-    flex-direction: column;
-    gap: 20px;
+  .products {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  nav a {
-    margin: 0 7px;
-    font-size: 12px;
-  }
-
-  .services {
+@media(max-width: 480px) {
+  .products {
     grid-template-columns: 1fr;
   }
 
   .hero {
-    padding: 100px 7%;
+    padding: 65px 7%;
+  }
+
+  main, .cart-section {
+    padding: 45px 6%;
   }
 }
